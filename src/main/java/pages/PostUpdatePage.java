@@ -11,7 +11,7 @@ public class PostUpdatePage {
             "is-hidden-touch']/button[contains(text(),'%s')]"));*/
 
     /*private static final SelenideElement MOOD_XPATH = $(By.xpath("//div[@class='buttons']" +
-            "/button[contains(text(),'%s')]"));*/
+            "/button[contains(text(),'%s')]"));ask*/
     private static final SelenideElement MOOD_XPATH = $(By.xpath("//div[@class='buttons']" +
             "/button[contains(text(),'no')]"));
     private static final SelenideElement RATE_XPATH = $(By.xpath("//div[@class='buttons hdas-addons " +
