@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import pages.PostSuccessPage;
 import pages.PostUpdatePage;
 import services.EditPostService;
-import services.PostSuccessService;
 import services.PostUpdateService;
 
 public class PostUpdateTest extends BaseTest{
