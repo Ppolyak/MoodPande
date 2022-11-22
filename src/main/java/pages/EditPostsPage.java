@@ -29,6 +29,13 @@ public class EditPostsPage {
             " 'Posted')]"));
     private static final SelenideElement POST_DELETED_TEXT = $(By.xpath("//*[contains(text()," +
             " 'Post deleted')]"));
+    private static final SelenideElement POST_UPDATE_BUTTON = $(By.xpath("//*[contains(@class," +
+            "'button is-success is-rounded')]"));
+
+    public PostUpdatePage clickPostUpdateButtonPage(){
+        POST_UPDATE_BUTTON.click();
+        return new PostUpdatePage();
+    }
 
     public EditPostsPage setRating(String rating){
         RATE_SELECT.get(RATE_1).selectOptionByValue(rating);

@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import services.EditPostService;
 
-public class EditPostRateTest extends BaseTest{
+public class EditPostTest extends BaseTest{
     private static final String RATING_FOR_EDIT = "7";
     private static final String RATING_FOR_SET = "2";
     private static final String TEXT_FOR_ADD_POST = "Some text";
@@ -37,7 +37,7 @@ public class EditPostRateTest extends BaseTest{
         Assert.assertTrue(actualMessage, "Post was not added");
     }
 
-    @Test
+    @Test(priority = 2)
     public void DeletePostTest(){
         Boolean actualMessage = editPostService.deletePost().postDeletedSuccessMessage();
         Assert.assertTrue(actualMessage, "Post was not deleted");
