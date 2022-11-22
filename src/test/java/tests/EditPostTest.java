@@ -17,7 +17,7 @@ public class EditPostTest extends BaseTest{
         editPostService.openEditPostTab(user);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void editRateTest(){
 
         /*
@@ -26,18 +26,18 @@ public class EditPostTest extends BaseTest{
                 .clickEditPostPage()
                 .setRating(rating)
                 .clickUpdateButton();
-        Assert.assertTrue(editPostsPage.postUpdatedSuccessMessage(),"No message");*/
-        Boolean actualMessage = editPostService.editRate(RATING_FOR_EDIT).postUpdatedSuccessMessage();
+        Assert.assertTrue(editPostsPage.postRateUpdatedSuccessMessage(),"No message");*/
+        Boolean actualMessage = editPostService.editRate(RATING_FOR_EDIT).postRateUpdatedSuccessMessage();
         Assert.assertTrue(actualMessage,"No message");
     }
 
-    @Test(priority = 0)
+    @Test(priority = 1)
     public void addPostTest(){
         Boolean actualMessage = editPostService.addPost(TEXT_FOR_ADD_POST,RATING_FOR_SET).postAddedSuccessMessage();
         Assert.assertTrue(actualMessage, "Post was not added");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void DeletePostTest(){
         Boolean actualMessage = editPostService.deletePost().postDeletedSuccessMessage();
         Assert.assertTrue(actualMessage, "Post was not deleted");

@@ -47,7 +47,7 @@ public class EditPostsPage {
         return this;
     }
 
-    public boolean postUpdatedSuccessMessage(){
+    public boolean postRateUpdatedSuccessMessage(){
         return POST_UPDATED_TEXT.shouldBe(Condition.visible, Duration.ofSeconds(10)).isDisplayed();
     }
 

@@ -1,15 +1,18 @@
 package services;
 
+import com.codeborne.selenide.Condition;
 import models.User;
 import pages.EditPostsPage;
 import pages.LoginPage;
+import pages.PostSuccessPage;
 import pages.PostUpdatePage;
+
+import java.time.Duration;
 
 public class PostUpdateService {
 
-    protected PostUpdatePage editPostsPage = new PostUpdatePage();
+    protected PostUpdatePage postUpdatePage = new PostUpdatePage();
     protected EditPostService editPostService = new EditPostService();
-    protected LoginPage loginPage = new LoginPage();
 
 
     public PostUpdatePage openPostUpdatePage(User user){
@@ -17,10 +20,12 @@ public class PostUpdateService {
         return new PostUpdatePage();
     }
 
-    public void updatePost(){
-        editPostsPage.setRate()
+    public PostSuccessPage updatePost(){
+       return postUpdatePage.setRate()
                 .setMood()
                 .clickOnUpdateButton();
     }
+
+
 
 }

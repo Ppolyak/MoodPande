@@ -1,7 +1,10 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+
+import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -19,6 +22,7 @@ public class PostUpdatePage {
     private static final SelenideElement UPDATE_BUTTON = $(By.xpath("//a[contains(text(),'Update')]"));
 
 
+
     public PostUpdatePage setRate(){
         RATE_XPATH.click();
         return this;
@@ -29,8 +33,9 @@ public class PostUpdatePage {
         return this;
     }
 
-    public void clickOnUpdateButton(){
+    public PostSuccessPage clickOnUpdateButton(){
         UPDATE_BUTTON.click();
+        return new PostSuccessPage();
     }
 
 
